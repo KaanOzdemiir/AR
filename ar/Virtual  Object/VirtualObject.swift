@@ -11,9 +11,6 @@ import ARKit
 
 class VirtualObject: SCNReferenceNode {
     
-    var current: VirtualObject{
-        return VirtualObject()
-    }
     
     /// The model name derived from the `referenceURL`.
     var modelName: String {

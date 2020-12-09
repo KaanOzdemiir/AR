@@ -52,16 +52,39 @@ class ViewController: UIViewController {
     }
     
     func planeVirtualObject() {
-        
-        if let lastPosition = focusSquare.lastPosition{
-            guard let scene = SCNScene(named: "art.scnassets/candle/candle.scn"),
-                  let objectNode = scene.rootNode.childNode(withName: "candle", recursively: false)
-            else { return }
+        if let lastPosition = focusSquare.lastPosition, let url = Bundle.main.url(forResource: "candle", withExtension: "scn", subdirectory: "art.scnassets/candle"), let object = VirtualObject(url: url){
             
-            objectNode.position = SCNVector3(lastPosition.x,lastPosition.y,lastPosition.z)
-            
-            sceneView.scene.rootNode.addChildNode(objectNode)
+            object.position = SCNVector3(lastPosition.x, lastPosition.y, lastPosition.z)
+            object.raycastQuery = .init(origin: lastPosition, direction: lastPosition, allowing: .estimatedPlane, alignment: .horizontal)
+
+            virtualObjectLoader.loadVirtualObject(object, loadedHandler: { [unowned self] loadedObject in
+                
+                do {
+                    let scene = try SCNScene(url: object.referenceURL, options: nil)
+                    self.sceneView.prepare([scene], completionHandler: { _ in
+                        DispatchQueue.main.async {
+//                            self.hideObjectLoadingUI()
+                            self.placeVirtualObject(loadedObject)
+                        }
+                    })
+                } catch {
+                    fatalError("Failed to load SCNScene from object.referenceURL")
+                }
+                
+            })
         }
+    }
+    
+    func placeVirtualObject(_ virtualObject: VirtualObject) {
+        guard let query = virtualObject.raycastQuery else {
+            return
+        }
+       
+        let trackedRaycast = createTrackedRaycastAndSet3DPosition(of: virtualObject, from: query,
+                                                                  withInitialResult: virtualObject.mostRecentInitialPlacementResult)
+        
+        virtualObject.raycast = trackedRaycast
+        virtualObject.isHidden = false
     }
     
     func createTrackedRaycastAndSet3DPosition(of virtualObject: VirtualObject, from query: ARRaycastQuery,
