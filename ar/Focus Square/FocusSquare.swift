@@ -52,6 +52,9 @@ class FocusSquare: SCNNode {
         }
     }
     
+    var lastRaycast: ARRaycastResult?
+    
+    
     var state: State = .initializing {
         didSet {
             guard state != oldValue else { return }
@@ -61,6 +64,7 @@ class FocusSquare: SCNNode {
                 displayAsBillboard()
                 
             case let .detecting(raycastResult, camera):
+                lastRaycast = raycastResult
                 if let planeAnchor = raycastResult.anchor as? ARPlaneAnchor {
                     displayAsClosed(for: raycastResult, planeAnchor: planeAnchor, camera: camera)
                 } else {

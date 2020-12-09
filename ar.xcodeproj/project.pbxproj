@@ -18,6 +18,8 @@
 		F7CC76C92580C12F00D085AB /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC76C82580C12F00D085AB /* FocusSquareSegment.swift */; };
 		F7CC76CD2580CCC100D085AB /* VC+ARCoachingOverlayViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC76CC2580CCC100D085AB /* VC+ARCoachingOverlayViewDelegate.swift */; };
 		F7CC76D12580CCEA00D085AB /* VC+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC76D02580CCEA00D085AB /* VC+ARSCNViewDelegate.swift */; };
+		F7CC76D52580D01300D085AB /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC76D42580D01300D085AB /* VirtualObject.swift */; };
+		F7CC76D92580D33000D085AB /* VirtualObjectLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC76D82580D33000D085AB /* VirtualObjectLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		F7CC76C82580C12F00D085AB /* FocusSquareSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
 		F7CC76CC2580CCC100D085AB /* VC+ARCoachingOverlayViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+ARCoachingOverlayViewDelegate.swift"; sourceTree = "<group>"; };
 		F7CC76D02580CCEA00D085AB /* VC+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		F7CC76D42580D01300D085AB /* VirtualObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		F7CC76D82580D33000D085AB /* VirtualObjectLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 		F7CC76A22580B51E00D085AB /* ar */ = {
 			isa = PBXGroup;
 			children = (
+				F7CC76D32580D00500D085AB /* Virtual  Object */,
 				F7CC76CB2580CCA500D085AB /* Extensions */,
 				F7CC76C42580C0D600D085AB /* Focus Square */,
 				F7CC76A32580B51E00D085AB /* AppDelegate.swift */,
@@ -104,6 +109,15 @@
 				F7CC76D02580CCEA00D085AB /* VC+ARSCNViewDelegate.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F7CC76D32580D00500D085AB /* Virtual  Object */ = {
+			isa = PBXGroup;
+			children = (
+				F7CC76D42580D01300D085AB /* VirtualObject.swift */,
+				F7CC76D82580D33000D085AB /* VirtualObjectLoader.swift */,
+			);
+			path = "Virtual  Object";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +195,11 @@
 				F7CC76C22580BFF300D085AB /* Utilities.swift in Sources */,
 				F7CC76CD2580CCC100D085AB /* VC+ARCoachingOverlayViewDelegate.swift in Sources */,
 				F7CC76C62580C0E200D085AB /* FocusSquare.swift in Sources */,
+				F7CC76D52580D01300D085AB /* VirtualObject.swift in Sources */,
 				F7CC76D12580CCEA00D085AB /* VC+ARSCNViewDelegate.swift in Sources */,
 				F7CC76A82580B51E00D085AB /* ViewController.swift in Sources */,
 				F7CC76A42580B51E00D085AB /* AppDelegate.swift in Sources */,
+				F7CC76D92580D33000D085AB /* VirtualObjectLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
