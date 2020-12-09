@@ -13,6 +13,11 @@
 		F7CC76AB2580B51E00D085AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CC76A92580B51E00D085AB /* Main.storyboard */; };
 		F7CC76AD2580B51F00D085AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7CC76AC2580B51F00D085AB /* Assets.xcassets */; };
 		F7CC76B02580B51F00D085AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7CC76AE2580B51F00D085AB /* LaunchScreen.storyboard */; };
+		F7CC76C22580BFF300D085AB /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC76C12580BFF300D085AB /* Utilities.swift */; };
+		F7CC76C62580C0E200D085AB /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC76C52580C0E200D085AB /* FocusSquare.swift */; };
+		F7CC76C92580C12F00D085AB /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC76C82580C12F00D085AB /* FocusSquareSegment.swift */; };
+		F7CC76CD2580CCC100D085AB /* VC+ARCoachingOverlayViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC76CC2580CCC100D085AB /* VC+ARCoachingOverlayViewDelegate.swift */; };
+		F7CC76D12580CCEA00D085AB /* VC+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7CC76D02580CCEA00D085AB /* VC+ARSCNViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		F7CC76AC2580B51F00D085AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7CC76AF2580B51F00D085AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7CC76B12580B51F00D085AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7CC76C12580BFF300D085AB /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		F7CC76C52580C0E200D085AB /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		F7CC76C82580C12F00D085AB /* FocusSquareSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
+		F7CC76CC2580CCC100D085AB /* VC+ARCoachingOverlayViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+ARCoachingOverlayViewDelegate.swift"; sourceTree = "<group>"; };
+		F7CC76D02580CCEA00D085AB /* VC+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				F7CC76A22580B51E00D085AB /* ar */,
+				F7CC76B82580B59B00D085AB /* Resource */,
 				F7CC76A12580B51E00D085AB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +67,43 @@
 		F7CC76A22580B51E00D085AB /* ar */ = {
 			isa = PBXGroup;
 			children = (
+				F7CC76CB2580CCA500D085AB /* Extensions */,
+				F7CC76C42580C0D600D085AB /* Focus Square */,
 				F7CC76A32580B51E00D085AB /* AppDelegate.swift */,
-				F7CC76A52580B51E00D085AB /* art.scnassets */,
 				F7CC76A72580B51E00D085AB /* ViewController.swift */,
-				F7CC76A92580B51E00D085AB /* Main.storyboard */,
-				F7CC76AC2580B51F00D085AB /* Assets.xcassets */,
-				F7CC76AE2580B51F00D085AB /* LaunchScreen.storyboard */,
-				F7CC76B12580B51F00D085AB /* Info.plist */,
+				F7CC76C12580BFF300D085AB /* Utilities.swift */,
 			);
 			path = ar;
+			sourceTree = "<group>";
+		};
+		F7CC76B82580B59B00D085AB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F7CC76A92580B51E00D085AB /* Main.storyboard */,
+				F7CC76AE2580B51F00D085AB /* LaunchScreen.storyboard */,
+				F7CC76A52580B51E00D085AB /* art.scnassets */,
+				F7CC76AC2580B51F00D085AB /* Assets.xcassets */,
+				F7CC76B12580B51F00D085AB /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F7CC76C42580C0D600D085AB /* Focus Square */ = {
+			isa = PBXGroup;
+			children = (
+				F7CC76C52580C0E200D085AB /* FocusSquare.swift */,
+				F7CC76C82580C12F00D085AB /* FocusSquareSegment.swift */,
+			);
+			path = "Focus Square";
+			sourceTree = "<group>";
+		};
+		F7CC76CB2580CCA500D085AB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F7CC76CC2580CCC100D085AB /* VC+ARCoachingOverlayViewDelegate.swift */,
+				F7CC76D02580CCEA00D085AB /* VC+ARSCNViewDelegate.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +177,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7CC76C92580C12F00D085AB /* FocusSquareSegment.swift in Sources */,
+				F7CC76C22580BFF300D085AB /* Utilities.swift in Sources */,
+				F7CC76CD2580CCC100D085AB /* VC+ARCoachingOverlayViewDelegate.swift in Sources */,
+				F7CC76C62580C0E200D085AB /* FocusSquare.swift in Sources */,
+				F7CC76D12580CCEA00D085AB /* VC+ARSCNViewDelegate.swift in Sources */,
 				F7CC76A82580B51E00D085AB /* ViewController.swift in Sources */,
 				F7CC76A42580B51E00D085AB /* AppDelegate.swift in Sources */,
 			);
@@ -288,12 +332,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZB49XM27T;
-				INFOPLIST_FILE = ar/Info.plist;
+				INFOPLIST_FILE = Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ko.ar;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ko.ar-work";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,12 +352,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8ZB49XM27T;
-				INFOPLIST_FILE = ar/Info.plist;
+				INFOPLIST_FILE = Resource/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ko.ar;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ko.ar-work";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
